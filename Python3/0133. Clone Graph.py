@@ -11,15 +11,27 @@ class Solution:
         def dfs(node):
             if not node:
                 return
-            if node in lookup:
-                return lookup[node]
             clone = Node(node.val,[])
             lookup[node] = clone
-        
             for i in node.neighbors:
-                clone.neighbors.append(dfs(i))
+                if i not in lookup:
+                    dfs(i)
+                clone.neighbors.append(lookup[i])
             return clone
         return dfs(node)
+#         lookup = {}
+#         def dfs(node):
+#             if not node:
+#                 return
+#             if node in lookup:
+#                 return lookup[node]
+#             clone = Node(node.val,[])
+#             lookup[node] = clone
+        
+#             for i in node.neighbors:
+#                 clone.neighbors.append(dfs(i))
+#             return clone
+#         return dfs(node)
     
 #         connect = {}
 #         node_list = {}
