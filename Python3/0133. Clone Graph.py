@@ -20,6 +20,7 @@ class Solution:
                 clone.neighbors.append(dfs(i))
             return clone
         return dfs(node)
+    
 #         connect = {}
 #         node_list = {}
 #         deque = [node]
@@ -46,3 +47,21 @@ class Solution:
 
         
 #         return node_list[node.val]
+
+#         head = Node(node.val,[])
+#         lookup = {}
+#         lookup[node] = head
+        
+#         queue = [node]
+#         while(queue!=[]):
+#             temp = queue.pop()
+#             for j in temp.neighbors:
+#                     if j not in lookup:
+#                         lookup[j] = Node(j.val,[])
+#                         queue.append(j)
+        
+#         for i in lookup:
+#             for j in i.neighbors:
+#                 lookup[i].neighbors.append(lookup[j])
+        
+#         return head
