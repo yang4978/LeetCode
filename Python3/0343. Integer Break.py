@@ -1,8 +1,5 @@
 class Solution:
     def integerBreak(self, n: int) -> int:
-
-class Solution:
-    def integerBreak(self, n: int) -> int:
         res = [1]*(n+1)
         for i in range(3,n+1):
             temp = 0
