@@ -1,5 +1,21 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
+        # queue = [("()",1)]
+        # res = []
+
+        # while queue:
+        #     s,layer = queue.pop(0)
+        #     if layer==n:
+        #         res.append(s)
+        #     else:
+        #         for i in range(layer*2):
+        #             if (s[:i]+"()"+s[i:],layer+1) not in queue:
+        #                 queue.append((s[:i]+"()"+s[i:],layer+1))
+        #         if ("("+s+")",layer+1) not in queue:
+        #             queue.append(("("+s+")",layer+1))
+        
+        # return res
+
         temp = [[""]]
         for i in range(1,n+1):
             temp_set = set()
