@@ -18,7 +18,7 @@ class Solution:
                     grid[i][j] = 0
                     count = 1
                     while queue:
-                        x,y = queue.pop()
+                        x,y = queue.pop(0)
                         for dx,dy in directions:
                             if 0<=x+dx<m and 0<=y+dy<n and grid[x+dx][y+dy] == 1:
                                 queue.append((x+dx,y+dy))
