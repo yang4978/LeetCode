@@ -25,3 +25,30 @@ class Solution:
         #             stack.append(i)
 
         # return res
+
+        
+
+#         def findValidParentheses(string,flag):
+#             left, right = 0, 0
+#             count = 0
+#             res = 0
+
+#             for i in string:
+#                 if i == '(':
+#                     left += 1
+
+#                 elif i == ')':
+#                     right += 1
+                
+#                 count += 1
+
+#                 if left*flag < right*flag:
+#                     left, right = 0, 0
+#                     count = 0
+                
+#                 elif left == right:
+#                     res = max(res,count)
+            
+#             return res
+        
+#         return max(findValidParentheses(s,1),findValidParentheses(reversed(s),-1))
