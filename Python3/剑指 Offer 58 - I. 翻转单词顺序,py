@@ -1,0 +1,50 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        # i = 0
+        # l = len(s)
+        # j = 0
+        # word = []
+
+        # while j<l:
+        #     while i<l and s[i] == ' ':
+        #         i += 1
+        #     j = i
+        #     while j<l and s[j] != ' ':
+        #         j += 1
+        #     if s[i:j] != '':
+        #         word.append(s[i:j])
+        #     i = j + 1
+  
+        # return (' ').join(reversed(word))
+
+        # i = 0
+        # res = ''
+        # l = len(s)
+
+        # while i<l:
+        #     temp = ''
+        #     while i<l and s[i] == ' ':
+        #         i += 1
+        #     while i<l and s[i] != ' ':
+        #         temp += s[i]
+        #         i += 1
+        #     if temp:
+        #         res = temp+' ' + res
+        
+        # return res[:-1]
+        
+        s = s.strip()
+        l = len(s)
+        i = j = l - 1
+        word = []
+
+        while i >= 0:
+            while i>=0 and s[i] != ' ':
+                i -= 1
+            word.append(s[i+1:j+1])
+
+            while i>=0 and s[i] == ' ':
+                i -= 1
+            j = i
+  
+        return (' ').join(word)
