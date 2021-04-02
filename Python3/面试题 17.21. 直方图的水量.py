@@ -5,7 +5,7 @@ class Solution:
 
         for h in height:
             if(h >= wall[0]):
-                edge = min(h, wall[0])
+                edge = wall[0]
                 while(wall):
                     res += edge - wall.pop() 
             wall.append(h)
@@ -14,7 +14,7 @@ class Solution:
         while(wall):
             h = wall.pop()
             if(h >= rwall[0]):
-                edge = min(h, rwall[0])
+                edge = rwall[0]
                 while(rwall):
                     res += edge - rwall.pop() 
             rwall.append(h)
